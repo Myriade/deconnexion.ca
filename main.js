@@ -53,10 +53,10 @@ function Card({contentObj, contentType, shouldwait}) {
 };
 
 const flash = { options: [
-	{shouldWait: 2400, contentType: 'book', code: 'mi', listId: 'maorie'},
+	{shouldWait: 2400, contentType: 'book', code: 'mi', listId: 'marie'},
 	{contentType: 'film', code: 'fu', listId: 'malorie', shouldWait: 3200},
-	{code: 'by', listId: 'marjorie', contentType: 'play', shouldWait: 800},
-	{shouldWait: 1600, listId: 'myleine', contentType: 'auteur', code: 'ja'}
+	{code: 'bo', listId: 'melissandre', contentType: 'play', shouldWait: 800},
+	{shouldWait: 1600, listId: 'mylene', contentType: 'auteur', code: 'ja'}
 ]}
 
 const SearchIcon = () => {
