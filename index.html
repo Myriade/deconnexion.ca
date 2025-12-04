@@ -13,13 +13,35 @@
   <meta charset="UTF-8">
   <title>Déconnexion.ca</title>
   <style type="text/css" media="screen">
-  	.wrap {text-align: center; margin: 10vh clamp(20px, 10vw, 100px); display: grid; align-content: center; height: 80vh; box-sizing: border-box;
+  	.wrap {text-align: center; margin: 10vh clamp(20px, 10vw, 100px); display: grid; align-content: center; position: relative; height: 80vh; box-sizing: border-box;
       background: azure;}
     article {max-width: 25rem; margin: 0 auto;}
     h1 {font-family: sans-serif; text-transform: uppercase;}
     p.slash {font-size: 2rem;}
     p {font-size: 1.5rem;}
     footer p {font-size: 1rem;}
+    .wrap .after {
+      display: block;
+      position: absolute;
+      top: 7vh;
+      right: 3vw;
+      width: 10px;
+      height: 10px;
+      overflow: hidden;
+      opacity: 0;
+      color: azure;
+      transition: 0.5s;
+    }
+    .wrap .after::after {
+      content: '/autrement';
+      width: max-content;
+      display: block;}
+    .wrap .after:hover {
+      overflow: visible;
+      opacity: 1;
+      color: black;
+      //cursor: se-resize;
+    }
   </style>
 </head>
 <body>
@@ -35,6 +57,7 @@
     <footer>
         <p>infos : cafe@deconnexion.ca</p>
     </footer>
+    <span class='after'/>
   </div>
 </body>
 </html>
