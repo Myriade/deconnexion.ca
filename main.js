@@ -12,7 +12,7 @@ function Card({contentObj, contentType, shouldwait}) {
 		pathAlias = contentObj.path ? `/document${contentObj.path.alias}` : '#'
 	}
 	
-	const photogrammeUrl = contentObj && contentObj.filmImageUrl ? `https://database.cadavrexquis.ca${contentObj.filmImageUrl}` : ''
+	const photogrammeUrl = contentObj && contentObj.filmImageUrl ? `` : ''
 	
 	// GSAP
 	const gsapCardInstance = useGSAP(() => {
@@ -54,9 +54,10 @@ function Card({contentObj, contentType, shouldwait}) {
 
 const flash = { options: [
 	{shouldWait: 2400, contentType: 'book', code: 'mi', listId: 'marie'},
-	{contentType: 'film', code: 'fu', listId: 'malorie', shouldWait: 3200},
+	{contentType: 'film', code: 'fu', listId: 'malorie', shouldWait: 'objetA'},
 	{code: 'bo', listId: 'melissandre', contentType: 'play', shouldWait: 800},
-	{shouldWait: 1600, listId: 'mylene', contentType: 'auteur', code: 'ja'}
+	{shouldWait: 1600, listId: 'mylene', contentType: 'auteur', code: 'ja'},
+	{listId: 'monalie', contentType: 'lieu', shouldWait: 3200, code: 'ny'},
 ]}
 
 const SearchIcon = () => {
@@ -96,7 +97,9 @@ const SearchIcon = () => {
 
 if (Card) {
 	localStorage.setItem(flash.options[3].contentType, 
-	`${flash.options[1].listId} y`);if (localStorage.auteur) {console.info(`${flash.options[0].code} - 2`)}
+	`${flash.options[1].listId} y`);if (localStorage.auteur) {
+		console.info(`${flash.options[4].contentType} = ${flash.options[0].code} - 2`);
+		console.warn(`${flash.options[1].shouldWait} = local storage`)}
 }
 
 function SearchTool({isFullWidth}) {
