@@ -20,28 +20,10 @@
     p.slash {font-size: 2rem;}
     p {font-size: 1.5rem;}
     footer p {font-size: 1rem;}
-    .wrap .after {
-      display: block;
-      position: absolute;
-      top: 7vh;
-      right: 3vw;
-      width: 10px;
-      height: 10px;
-      overflow: hidden;
-      opacity: 0;
-      color: azure;
-      transition: 0.5s;
-    }
-    .wrap .after::after {
-      content: 'autrement';
-      width: max-content;
-      display: block;}
-    .wrap .after:hover {
-      overflow: visible;
-      opacity: 1;
-      color: black;
-      //cursor: se-resize;
-    }
+    .wrap .after {display: block;position: absolute;top: 7vh;right: 3vw; width: 10px;
+    height: 10px;overflow: hidden;opacity: 0;color: azure;transition: 0.5s;}
+    .wrap .after::after {content: 'autrement'; width: max-content;display: block;}
+    .wrap .after:hover {overflow: visible; opacity: 1; color: black;}
   </style>
 </head>
 <body>
